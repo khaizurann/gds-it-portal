@@ -1,6 +1,6 @@
 {
   // Must match the app name on Cloudflare
-  "name": "gds-it-portal",
+  "name": "it-portal",
   // The backend code (AI endpoint)
   "main": "worker/index.js",
   "compatibility_date": "2026-11-01",

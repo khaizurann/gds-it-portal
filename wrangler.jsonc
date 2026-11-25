@@ -9,8 +9,8 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    // Requests to /api/... go to the backend code first
-    "run_worker_first": ["/api/*"]
+    // Every request goes to the backend code first (it checks the login)
+    "run_worker_first": true
   },
   // Turns on Workers AI (free daily allowance)
   "ai": { "binding": "AI" }

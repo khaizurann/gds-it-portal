@@ -1,8 +1,17 @@
 {
+  // Must match the app name on Cloudflare
   "name": "gds-it-portal",
+  // The backend code (AI endpoint)
+  "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
   "assets": {
+    // The built React website
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // Requests to /api/... go to the backend code first
+    "run_worker_first": ["/api/*"]
+  },
+  // Turns on Workers AI (free daily allowance)
+  "ai": { "binding": "AI" }
 }
